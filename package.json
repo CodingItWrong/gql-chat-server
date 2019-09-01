@@ -1,0 +1,7 @@
+{
+  "name": "gql-chat-server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Josh Justice <me@codingitwrong.com>",
+  "license": "MIT"
+}
