@@ -4,6 +4,11 @@
   "main": "index.js",
   "author": "Josh Justice <me@codingitwrong.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "lint": "eslint *.js"
+  },
   "dependencies": {
     "apollo-server": "^2.9.2",
     "apollo-server-express": "^2.9.2",
@@ -11,5 +16,13 @@
     "express": "^4.17.1",
     "graphql": "^14.5.4",
     "mongoose": "^5.6.11"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-codingitwrong": "^0.1.4",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
   }
 }
