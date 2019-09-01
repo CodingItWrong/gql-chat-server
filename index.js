@@ -6,6 +6,7 @@ const graphql = require('./graphql')
 let app = express()
 const httpServer = http.createServer(app)
 graphql.applyMiddleware({ app })
+graphql.installSubscriptionHandlers(httpServer)
 
 const port = process.env.PORT || 80
 httpServer.listen(port, () => {

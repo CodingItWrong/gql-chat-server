@@ -6,6 +6,7 @@ const pubsub = new PubSub()
 
 const typeDefs = gql`
   type Message {
+    _id: String
     text: String
     timestamp: Int
   }
@@ -31,9 +32,9 @@ const resolvers = {
   },
   Mutation: {
     sendMessage: (_, args) => {
-      pubsub.publish(MESSAGE_SENT, { messageSent: args })
-      repo.create(args)
-      return args
+      const record = repo.create(args)
+      pubsub.publish(MESSAGE_SENT, { messageSent: record })
+      return record
     },
   },
   Subscription: {
