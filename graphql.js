@@ -6,7 +6,8 @@ const pubsub = new PubSub()
 
 const typeDefs = gql`
   type Message {
-    _id: String
+    # somehow _id is auto-mapped to id
+    id: String
     text: String
     timestamp: Int
   }
